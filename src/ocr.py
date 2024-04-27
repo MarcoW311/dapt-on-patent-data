@@ -8,8 +8,10 @@ from pdf2image import convert_from_path
 import easyocr
 import pytesseract
 from subprocess import Popen, PIPE
+import xml.etree.ElementTree as ET
 
 mode = sys.argv[1]
+assert mode in ['ocrad', 'tesseract', 'easyocr']
 print(f"Mode: {mode}")
 
 if mode == 'easyocr':
@@ -41,7 +43,17 @@ def easyocr_extract(img):
 
 for pdf_file in tqdm.tqdm(pdf_files):
     fname = os.path.basename(pdf_file).split('.')[0]
-    pages = convert_from_path(pdf_file)
+    outf = f'data_cleaned/{mode}/{fname}.txt'
+    if os.path.exists(outf):
+        continue
+
+    xml_file = '/'.join(pdf_file.split('/')[:-1]+[f'us-patent-image.xml'])
+    metadata = ET.parse(xml_file).getroot()[0]
+    portions = [(int(metadata.find(p)[0].text), int(metadata.find(p)[1].text)) for p in ['abstract-pages', 'description-pages', 'claims-pages']]
+    pages = []
+    for p in portions:
+        pages += convert_from_path(pdf_file, first_page=p[0], last_page=min(p[0]+5, p[1]), grayscale=True)
+    
     results = []
     for page in pages:
         if mode == 'ocrad':
@@ -54,6 +66,6 @@ for pdf_file in tqdm.tqdm(pdf_files):
             output = easyocr_extract(page)
             results.append(output)
 
-    with open(f'data_cleaned/{mode}/{fname}.txt', 'w') as f:
+    with open(outf, 'w') as f:
         f.write("\n".join(results))
     
