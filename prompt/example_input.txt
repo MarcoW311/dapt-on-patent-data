@@ -1,0 +1,185 @@
+OCR 1:
+(12)
+
+United States Patent
+Reguly et a].
+
+ 
+
+US011861015B1
+
+  
+
+US 11,861,015 B1
+Jan. 2, 2024
+
+(10) Patent No
+(45) Date of Patent:
+
+ 
+
+(54)
+
+(71)
+(72)
+
+(73)
+(*)
+
+(21)
+(22)
+
+(60)
+
+(51)
+
+(52)
+
+(53)
+
+(56)
+
+RISK SCORING SYSTEM FOR
+VULNERABILITY MITIGATION
+
+Applicant: Tripwire, Inc., Portland, OR (US)
+
+Inventors: Tyler Reguly, Toronto (CA); Lamar
+Bailey, Cumming, GA (US); Lane
+Thames, Atlanta, GA (US); Craig
+Young, Alpharetta, GA (US)
+
+Assignee: TRIPWIRE, INC., Portland, OR (US)
+
+Notice: Subject to any disclaimer, the term of this
+
+patent is extended or adjusted under 35
+USC. 154(b) by 347 days.
+
+Appl No: 17/209,050
+
+Filed: Mar. 22, 2021
+
+Related US. Application Data
+
+Provisional application No. 62/992,790, ﬁled on Mar,
+20, 2020.
+
+Int. Cl.
+
+G06F 21/5 7
+
+G06F 17/11
+
+US. Cl.
+
+CPC ,,,,,,,,,,,, G06F 21/577 (2013.01); G06F 17/11
+(2013.01); G06F 2221/034 (2013.01)
+
+Field of Classiﬁcation Search
+
+None
+
+See application ﬁle for complete search history.
+
+(2013.01)
+(2006.01)
+
+References Cited
+U.S. PATENT DOCUMENTS
+
+7/2007 Good et a1.
+1/2008 DiFalco
+4/2008 DiFaJco et all.
+
+7,243,348 B2
+7,316,016 B2
+7,360,099 B2
+
+7,587,754 B2 9/2009 DiFalco et a1.
+
+7,620,715 B2 11/2009 DiFalco et 211.
+
+7,765,460 B2 7/2010 DiFalco et a1.
+
+7,822,724 B2 10/2010 DiFalco et a1.
+
+8,140,635 B2 3/2012 DiFalco
+
+8,176,158 B2 5/2012 DiFalco et a1.
+
+8,819,491 B2 8/2014 Whitlock et a1.
+
+8,984,643 B1 * 3/2015 Krishei' ............... H04L 63/1408
+726/25
+
+9,634,951 B1 4/2017 Hunt et a1.
+
+(Continued)
+
+OTHER PUBLICATIONS
+
+Irfahn Khimji, Tripwire, Inc, “Tripwire Vulnerability Risk Met-
+rics," White Paper, © 2019, 8 pages.
+
+(Continued)
+
+Primary Examiner i Fatournata Traore
+
+(74) Attorney, Agent, or Firm 7 Fredrikson & Byron,
+PA
+
+(57) ABSTRACT
+
+Apparatus, methods, and articles of manufacture or dis-
+closed for implementing risk scoring systems used for
+vulnerability mitigation in a distributed computing environ-
+ment, In one disclosed example, a computer-implemented
+method of mitigating vulnerabilities within a computing
+environment includes producing a risk score indicating at
+least one of: a Vulnerability component, a security conﬁgu-
+ration component, or a ﬁle integrity component for an object
+within the computing environment, producing a signal score
+indicating a factor that contributes to risk for the object, and
+combining the risk score and the signal score to produce a
+combined risk score indicating a risk level associated with at
+least one vulnerability of the computing system object. In
+some examples, the method further includes mitigating the
+at least one vulnerability by changing a state of a computing
+object using the combined risk score.
+
+19 Claims, 13 Drawing Sheets
+
+3110
+
+OCR 2:
+US011861015B1
+(12) United States Patent Reguly et al.
+(10) Patent No:: US 11,861,015 Bl (45) Date of Patent: Jan. 2, 2024
+(54) RISK SCORING SYSTEM FOR VULNERABILITY MITIGATION
+7,587,754 B2 7,620,715 B2 7,765.460 B2 ,822,724 B2 8,140,635 B2 8,176,158 B2 8,819,491 B2 8,984,643 Bl
+9/2009 DiFalco et al, 11/2009 DiFalco et al. 7/2010 DiFalco et al, 10/2010 DiFalco et al 3/2012 DiFalco 5/2012 DiFalco et al. 8/2014 Whitlock et al. 3/2015 Krisher
+71) Applicant: Tripwire, [nc , Portland;, OR (US)
+(72) Inventors: Tyler Reguly; Toronto (CA); Lamar Bailey, Cumming; GA (US); Lane Thames, Atlanta, GA (US); Craig Young; Alpharetta, GA (US)
+HOAL 63/1408 726/25
+9,634,951 Bl
+4/2017 Hunt et al, (Continued)
+(73) Assignee: TRIPWIRE, INC. Portland, OR (US)
+OTHER PUBLICATIONS
+Notice:
+Subject to any disclaimer; the term of this patent is extended or adjusted under 35 U.S.C. 154(6) by 347 days_ (21) Appl. No:: 17/209,050
+Irfahn Khimji, Tripwire, Inc- ~Tripwire Vulnerability Risk Met- rics, White Paper; 2019, 8 pages. (Continued)
+Primary Examiner Fatoumata Traore 74) Attorney, Agent, or Firm Fredrikson PA-
+(22) Filed:
+Mar: 22, 2021
+Byron;
+Related US. Application Data
+60) Provisional application No. 62/992,790, filed on Mar: 20, 2020.
+(57) ABSTRACT Apparatus , methods, and articles of manufacture or dis- closed   for  implementing risk scoring   systems used for vulnerability mitigation in a distributed computing environ- ment _ In one disclosed example, computer-implemented method of mitigating vulnerabilities within computing environment includes producing a risk score indicating at least one of: vulnerability component, security configu - ration component; or a file integrity component for an object within the computing environment; producing a signal score indicating a factor that contributes to risk for the object; and combining the risk score and the signal score to produce a combined risk score indicating a risk level associated with at least one vulnerability of the computing system object In some examples, the method further includes mitigating the at least one vulnerability by changing a state of a computing object using the combined risk score_
+(51) Int: CL GO6F 2157 (2013.01) GO6F 17/11 (2006.01) 52) U.S: Cl CPC GO6F 21/577 (2013.01); GO6F 17/11 (2013.01); GO6F 2221/034 (2013.01) 58) Field of Classification Search None See application file for complete search history:
+56)
+References Cited
+US: PATENT DOCUMENTS
+7,243,348 B2 7,316,016 B2 7,360,099 B2
+7/2007 Good et al. 1/2008 DiFalco 4/2008 DiFalco et al.
+19 Claims, 13 Drawing Sheets

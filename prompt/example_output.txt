@@ -1,0 +1,53 @@
+US011861015B1
+
+RISK SCORING SYSTEM FOR VULNERABILITY MITIGATION
+
+Applicant: Tripwire, Inc., Portland, OR (US)
+
+Inventors: Tyler Reguly, Toronto (CA); Lamar Bailey, Cumming, GA (US); Lane Thames, Atlanta, GA (US); Craig Young, Alpharetta, GA (US)
+
+Assignee: TRIPWIRE, INC., Portland, OR (US)
+
+Notice: Subject to any disclaimer, the term of this patent is extended or adjusted under 35 USC. 154(b) by 347 days.
+
+Appl. No.: 17/209,050
+
+Filed: Mar. 22, 2021
+
+Related U.S. Application Data: Provisional application No. 62/992,790, filed on Mar. 20, 2020.
+
+Int. Cl.
+G06F 21/57 (2013.01)
+G06F 17/11 (2006.01)
+
+U.S. Cl.
+СРС ............... G06F 21/577 (2013.01); G06F 17/11 (2013.01); G06F 2221/034 (2013.01)
+
+Field of Classification Search: None
+See application ﬁle for complete search history.
+
+References Cited:
+U.S. PATENT DOCUMENTS
+7,243,348 B2 7/2007 Good et al.
+7,316,016 B2 1/2008 DiFalco
+7,360,099 B2 4/2008 DiFalco et al.
+7,587,754 B2 9/2009 DiFalco et al.
+7,620,715 B2 11/2009 DiFalco et al.
+7,765.460 B2 7/2010 DiFalco et al.
+7,822,724 B2 10/2010 DiFalco et al.
+8,140,635 B2 3/2012 DiFalco
+8,176,158 B2 5/2012 DiFalco et al.
+8,819,491 B2 8/2014 Whitlock et al.
+8,984,643 B2 3/2015 Krisher ............... HO4L 63/1408 726/25
+9,634,951 B1 4/2017 Hunt et a1.
+
+OTHER PUBLICATIONS:
+Irfahn Khimji, Tripwire, Inc., "Tripwire Vulnerability Risk Metrics," White Paper, 2019, 8 pages.
+
+Primary Examiner - Fatoumata Traore
+Attorney, Agent, or Firm - Fredrikson & Byron, P.A.
+
+ABSTRACT
+Apparatus, methods, and articles of manufacture or disclosed for implementing risk scoring systems used for vulnerability mitigation ni adistributed computing environment. In one disclosed example, a computer-implemented method of mitigating vulnerabilities within a computing environment includes producing a risk score indicating at least one of: a vulnerability component, a security configuration component. or a file integrity component for an object within the computing environment, producing a signal score indicating a factor that contributes to risk for the object, and combining the risk score and the signal score to produce a combined risk score indicating a risk level associated with at least one vulnerability of the computing system object. In some examples, the method further includes mitigating the at least one vulnerability by changing astate of acomputing object using the combined risk score.
+
+19 Claims, 13 Drawing Sheets
