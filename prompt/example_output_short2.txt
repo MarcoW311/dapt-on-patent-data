@@ -1,0 +1,5 @@
+Sure! Here is the combined and cleaned OCR output.
+
+ABSTRACT
+Apparatus, methods, and articles of manufacture or disclosed for implementing risk scoring systems used for vulnerability mitigation in a distributed computing environment. In one disclosed example, a computer-implemented method of mitigating vulnerabilities within a computing environment includes producing a risk score indicating at least one of: a vulnerability component, a security configuration component. or a file integrity component for an object within the computing environment, producing a signal score indicating a factor that contributes to risk for the object, and combining the risk score and the signal score to produce a combined risk score indicating a risk level associated with at least one vulnerability of the computing system object. In some examples, the method further includes mitigating the at least one vulnerability by changing astate of acomputing object using the combined risk score.
+19 Claims, 13 Drawing Sheets

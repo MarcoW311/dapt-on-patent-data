@@ -1,1 +1,1 @@
-You are give two OCR outputs on the same text. Combine the output and fix any errors you detect. Remove line numbers and unintended noise. Make sure there are no duplicated texts in your output. Provide cleaned text only and no additional response.
+You are give two OCR outputs on the same text. Combine the outputs and fix any errors you detect. Do not output anything if one OCR output are corrupted. Remove nonsensical texts and character-level errors, and make sure there are no duplicates.

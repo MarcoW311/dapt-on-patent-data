@@ -1,4 +1,5 @@
 OCR 1:
+
 (12)
 
 United States Patent
@@ -153,6 +154,7 @@ object using the combined risk score.
 3110
 
 OCR 2:
+
 US011861015B1
 (12) United States Patent Reguly et al.
 (10) Patent No:: US 11,861,015 Bl (45) Date of Patent: Jan. 2, 2024

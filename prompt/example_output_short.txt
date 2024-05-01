@@ -1,15 +1,7 @@
+Sure! Here is the combined and cleaned OCR output.
+
 US011861015B1
-
 RISK SCORING SYSTEM FOR VULNERABILITY MITIGATION
-
 Applicant: Tripwire, Inc., Portland, OR (US)
-
 Inventors: Tyler Reguly, Toronto (CA); Lamar Bailey, Cumming, GA (US); Lane Thames, Atlanta, GA (US); Craig Young, Alpharetta, GA (US)
-
 Assignee: TRIPWIRE, INC., Portland, OR (US)
-
-Notice: Subject to any disclaimer, the term of this patent is extended or adjusted under 35 USC. 154(b) by 347 days.
-
-Appl. No.: 17/209,050
-
-Filed: Mar. 22, 2021

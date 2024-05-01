@@ -3,3 +3,5 @@ OCR
 the quick brown fox
 combined and cleaned text
 - - - - -
+Apparatus, methods, and articles of manufacture or disclosed for implementing risk scoring systems
+RISK SCORING SYSTEM FOR VULNERABILITY MITIGATION

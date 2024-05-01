@@ -1,0 +1,29 @@
+OCR 1:
+
+(57) ABSTRACT
+
+Apparatus, methods, and articles of manufacture or dis-
+closed for implementing risk scoring systems used for
+vulnerability mitigation in a distributed computing environ-
+ment, In one disclosed example, a computer-implemented
+method of mitigating vulnerabilities within a computing
+environment includes producing a risk score indicating at
+least one of: a Vulnerability component, a security conﬁgu-
+ration component, or a ﬁle integrity component for an object
+within the computing environment, producing a signal score
+indicating a factor that contributes to risk for the object, and
+combining the risk score and the signal score to produce a
+combined risk score indicating a risk level associated with at
+least one vulnerability of the computing system object. In
+some examples, the method further includes mitigating the
+at least one vulnerability by changing a state of a computing
+object using the combined risk score.
+
+19 Claims, 13 Drawing Sheets
+
+OCR 2:
+
+(57) ABSTRACT Apparatus , methods, and articles of manufacture or dis- closed   for  implementing risk scoring   systems used for vulnerability mitigation in a distributed computing environ- ment _ In one disclosed example, computer-implemented method of mitigating vulnerabilities within computing environment includes producing a risk score indicating at least one of: vulnerability component, security configu - ration component; or a file integrity component for an object within the computing environment; producing a signal score indicating a factor that contributes to risk for the object; and combining the risk score and the signal score to produce a combined risk score indicating a risk level associated with at least one vulnerability of the computing system object In some examples, the method further includes mitigating the at least one vulnerability by changing a state of a computing object using the combined risk score_
+(51) Int: CL GO6F 2157 (2013.01) GO6F 17/11 (2006.01) 52) U.S: Cl CPC GO6F 21/577 (2013.01); GO6F 17/11 (2013.01); GO6F 2221/034 (2013.01) 58) Field of Classification Search None See application file for complete search history:
+56)
+19 Claims, 13 Drawing Sheets
