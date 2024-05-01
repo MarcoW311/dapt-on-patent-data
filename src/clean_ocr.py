@@ -91,7 +91,7 @@ def clean_ocr(
         for i in tqdm(range(0, limit, chunk_size * batch_size)):
 
             ocr_pairs = [(texts[0][i+chunk_size*b:i+chunk_size*(b+1)], texts[1][i+chunk_size*b:i+chunk_size*(b+1)]) for b in range(batch_size)]
-            ocr_pairs = [pair for pair in ocr_pairs if len(pair[0]) > chunk_size // 2 and len(pair[1]) > chunk_size // 2]
+            ocr_pairs = [pair for pair in ocr_pairs if len(pair[0]) > 1000 and len(pair[1]) > 1000]
             if len(ocr_pairs) == 0:
                 continue
             inputs = [f"OCR 1:\n\n{ocr1}\n\nOCR 2:\n\n{ocr2}" for (ocr1, ocr2) in ocr_pairs]
