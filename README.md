@@ -1,11 +1,5 @@
 # This is the repo for 10-623 GenAI Group Project at CMU
 
-## Code Structure
--src\
---perplexity.ipynb
-
-Now this repo only contains baseline eval code.
-
 ## Further pretraining gpt-2
 The code is in `src/run_clm.py` and I used the command below.
 ```bash
